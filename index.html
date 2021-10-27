@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+  <title>Jasper Cordova</title>
+</head>
+
+<body>
+  <div class="header content-area">
+    <div class="logo" id='mainLogo'>Jasper Cordova</div>
+    <div class="links">
+      <button class="link" id="aboutBtn">About</button>
+      <button class="link" id="projectsBtn">Projects</button>
+      <button class="link" id="experienceBtn">Experience</button>
+      <button class="link" id="referenceBtn">Reference</button>
+      <button class="link" id="contactBtn">Contact</button>
+    </div>
+  </div>
+  <div class="spacer"></div>
+
+  <div class="grid-container">
+    <div class="sidebar content-area">
+      <div class="sidebar-content">Not exactly sure what will go here yet, it may get canned.</div>
+    </div>
+
+    <div class="body content-area">
+      <div class="main-section body-content" id="mainSection" hidden>
+        A general description of this site and navigation explanations.
+      </div>
+      <div class="about-section body-content" id="aboutSection" hidden>
+        About me, a more personal view of me
+      </div>
+      <div class="projects-section body-content" id="projectsSection" hidden>
+        Some of the projects I've worked on, including links or screenshots
+      </div>
+      <div class="experience-section body-content" id="experienceSection" hidden>
+        Work experience and related
+      </div>
+      <div class="reference-section body-content" id="referenceSection" hidden>
+        References (maybe)
+      </div>
+      <div class="contact-section body-content" id="contactSection" hidden>
+        <form id="contactForm">
+          
+          <label for="formName" class="form-label-name">Name</label>
+          <input
+          type="text"
+          class="form-input-name"
+          id="formName"
+          placeholder="First and Last"
+          required>
+          
+          <label for="formEmail" class="form-label-email">Email</label>
+          <input
+          type="email"
+          class="form-input-email"
+          id="formEmail"
+          placeholder="example@email.com"
+          required>
+          
+          <label for="formPhone" class="form-label-phone">Phone</label>
+          <input
+          type="tel"
+          class="form-input-phone"
+          id="formPhone"
+          maxlength="12"
+          placeholder="xxx-xxx-xxxx"
+          pattern="^\d{3}-\d{3}-\d{4}$">
+
+          <textarea
+          type="text"
+          id="formRequest" 
+          class="form-input-free" 
+          placeholder="Fill your request here"
+          required></textarea>
+          
+          <button type="submit" id="formSubmitButton" class="form-submit-button">Submit</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer content-area">
+    <div class="footer-content">footer</div>
+  </div>
+</body>
+
+</html>

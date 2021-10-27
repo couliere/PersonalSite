@@ -1,0 +1,160 @@
+* {
+  border: 0px solid white;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+#html {
+  height: fill;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  background-color: rgb(32, 35, 35);
+  margin: 0;
+}
+
+.content-area {
+  border-radius: 15px;
+}
+
+/* -- HEADER -- */
+.header {
+  grid-area: header;
+  border-radius: 0 0 15px 15px;
+  position: fixed;
+  width: 100%;
+  display: grid;
+  background-color: rgb(6, 122, 117);
+  color: white;
+  grid-template-columns: 1fr 5fr;
+  user-select: none;
+}
+
+.logo {
+  margin: 5px;
+  justify-self: center;
+}
+
+.links {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  margin: 5px;
+}
+
+.link {
+  background-color: transparent;
+  color: white;
+  height: 30px;
+}
+
+.link:hover {
+  background-color: rgba(0, 0, 0, .25);
+}
+
+.spacer {
+  height: 45px;
+}
+
+
+/* -- CONTENT -- */
+.grid-container {
+  display: grid;
+  width: fill;
+  margin: 0 10px;
+  height: 100%;
+  grid-template-columns: auto;
+  grid-auto-rows: auto;
+  grid-gap: 10px;
+  grid-template-areas: 
+  "header header header header"
+  "sidebar content content content"
+  "footer footer footer footer";
+}
+
+/* -- SIDEBAR -- */
+.sidebar {
+  min-width: 150px;
+  grid-area: sidebar;
+  display: grid;
+  background-color: rgba(6, 122, 117, .25);
+  color: white;
+  width: 100%;
+}
+
+.sidebar-content {
+  margin: 15px 5px;
+  width: 95%;
+  overflow: unset;
+}
+
+/* -- BODY -- */
+.body {
+  grid-area: content;
+  background-color: rgba(255, 255, 255, .1);
+  color: white;
+  min-width: 305px;
+}
+
+.body-content {
+  margin: 15px;
+}
+
+/* -- CONTACT FORM -- */
+
+#contactForm {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 10px;
+  grid-auto-rows: minmax(25px, auto);
+}
+
+.form-label-name,
+.form-label-email,
+.form-label-phone {
+  grid-column: 1 / 1;
+  width: fit-content;
+}
+.form-input-name,
+.form-input-email,
+.form-input-phone {
+  grid-column: 2 / 6;
+  height: 25px;
+}
+
+.form-label-name,
+.form-input-name {
+  grid-row: 1;
+}
+.form-label-email,
+.form-input-email {
+  grid-row: 2;
+}
+.form-label-phone,
+.form-input-phone {
+  grid-row: 3;
+}
+.form-input-free {
+  grid-column: 1/6;
+  grid-row: 4/6;
+  resize: vertical;
+}
+.form-submit-button {
+  grid-column: 3/6;
+  grid-row: 6;
+}
+
+/* -- FOOTER -- */
+.footer {
+  grid-area: footer;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  border-radius: 15px 15px 0 0;
+  background-color: rgba(6, 122, 117, .5);
+  color: white;
+}
+
+.footer-content {
+  margin: 5px;
+}
